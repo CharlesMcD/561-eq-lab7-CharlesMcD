@@ -34,3 +34,16 @@
 - Pour construire l'image: ** docker build -t webapp:release -f ./dockerfile/release .**
 - Pour tester l'image *release* en local, exécuter le conteneur: **docker run -it --rm -p 8080:5000 webapp:release**
 
+### Copier (manuellement, en ligne de commande) l'image webapp:release sur docker hub
+- Une image sur docker hub doit avoir le format suiavnt: ORGANISATION/NOM_IMAGE:TAG. Exemples: 
+  - ymazieres/dotnet:compile
+  - ymazieres/wepapp:latest
+  - microsoft/dotnet:latest
+  - centos/wordpress:latest
+- Pour *pusher* une image sur docker hub, on doit taguer l'image dans le bon format, se connecter et l'envoyer. Exemple pour l'image **webapp:release** :
+```
+   docker tag webapp:release ymazieres/webapp:latest
+   docker login -u=ymazieres -p=monmotdepasse
+   docker push ymazieres/webapp:latest
+```
+- Faire un push de l'image **webapp:release** dans votre compte docker hub (**VOTRE_NOM_UTILISATEUR_DOCKER_HUB/webapp:latest**)
