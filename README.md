@@ -1,7 +1,7 @@
 # Lab7
 - Travail individuel
 - Compte pour 1 point
-- Remettre avant la fin du prochain cours
+- Remettre avant le début du prochain cours
 
 ## Installation
 - Copier tout le contenu du lab 6 dans ce repository (**sans le dossier caché .git**)
