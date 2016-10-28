@@ -16,3 +16,6 @@ before_install:
 
 script:
     - docker run -it --rm -v $HOME/publish:/root/publish -v $HOME/cache:/root/.nuget/packages webapp:test
+
+after_success:
+    - docker build -t webapp:release -f ./dockerfile/release 
