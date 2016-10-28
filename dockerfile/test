@@ -3,7 +3,7 @@ FROM ymazieres/dotnet:compile
 CMD ["sh", "/script/startScript.sh"]
 ENV ASPNETCORE_URLS http://+:5000
 
-COPY ../scripts/testAndPublish.sh /scripts/testAndPublish.sh
+COPY /scripts/testAndPublish.sh /scripts/testAndPublish.sh
 RUN chmod +x /scripts/testAndPublish.sh
 
 COPY /src /src
