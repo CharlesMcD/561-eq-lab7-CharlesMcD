@@ -2,12 +2,11 @@ FROM microsoft/dotnet:latest
 
 ENV ASPNETCORE_URLS http://+:5000
 
-# CMD ["dotnet", "webapp.dll"]
+CMD ["dotnet", "webapp.dll"]
 
 COPY /publish /src/publish
 
 WORKDIR /src/publish
 
-CMD dotnet restore
-
-CMD dotnet run
+#CMD dotnet restore
+#CMD dotnet run
